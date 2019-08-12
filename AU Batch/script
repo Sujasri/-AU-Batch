@@ -1,0 +1,53 @@
+Script started on Mon 12 Mar 2018 11:49:09 PM CDT
+bash-4.2$ exit./aubatchgcc -pthread -o aubatch aubatch.c
+bash-4.2$ gcc -pthread -o aubatch aubatch.c[C[C[C[C[C[C[C[C[C[Cexit[K./aubatchgcc -pthread -o aubatch aubatch.cprocess process.c
+bash-4.2$ gcc -pthread -o process process.caubatch aubatch.c[C[C[C[C[C[C[C[C[C[Cexit[K./aubatchgcc -pthread -o aubatch aubatch.cprocess process.c[C[C[C[C[C[C[C[C[C[Cexit[K./aubatchgcc -pthread -o aubatch aubatch.c
+bash-4.2$ gcc -pthread -o aubatch aubatch.cprocess process.caubatch aubatch.c[C[C[C[C[C[C[C[C[C[Cexit[K./aubatch
+Welcome to Sujasri's batch job scheduler version 1.0
+Type 'help' to find more about AUBatch commands.
+>help
+
+run <jobname> <argument1> <argument2> <burst_time> <priority>: submit a job named <jobname>,
+		 execution time is <burst_time>,
+		 priority is <priority>.
+list: display the job status
+fcfs: change the scheduling policy to FCFS
+sjf: change the scheduling policy to SJF
+priority: change the scheduling policy to priority
+quit: exit AUBatch
+>run a 1 2 3 4
+
+>run s 5 6 7 8
+
+>list
+
+Name	CPU_Time	Priority	Arrival_time	Progress
+a	3		4		23:49:40	To be executed
+s	7		8		23:49:44	To be executed
+>pi riority
+
+Scheduling policy is switched to Priority. All the 2 waiting jobs have been rescheduled.
+>list
+
+Name	CPU_Time	Priority	Arrival_time	Progress
+s	7		8		23:49:44	To be executed
+a	3		4		23:49:40	To be executed
+>l sjf
+
+Scheduling policy is switched to SJF. All the 1 waiting jobs have been rescheduled.
+>list
+
+Name	CPU_Time	Priority	Arrival_time	Progress
+s	7		8		23	To be executed
+>list
+
+Name	CPU_Time	Priority	Arrival_time	Progress
+>quit
+
+Total jobs submitted : 2
+Average waiting time : 43.000000
+Average turn around time : 48.000000
+Throughput : 0.020833bash-4.2$ exit
+exit
+
+Script done on Mon 12 Mar 2018 11:50:37 PM CDT
